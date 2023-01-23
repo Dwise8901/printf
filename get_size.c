@@ -15,7 +15,7 @@ int get_size(const char *format, int *i)
 	if (format[curr_i] == 'l')
 		size = S_LONG;
 	else if (format[curr_i] == 'h')
-		size = S_SHORT;
+		size = S_SHORt;
 
 	if (size == 0)
 		*i = curr_i - 1;
