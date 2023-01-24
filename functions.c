@@ -1,6 +1,6 @@
 #include "main.h"
 
-/***************************** PRINT CHAR **********************************/
+/************************* PRINT CHAR *************************/
 
 /**
  * print_char - Prints a char
@@ -84,6 +84,29 @@ int print_string(va_list types, char buffer[],
  * @precision: Precision specification
  * @size: Size specifier
  * return: Number of chars printed
+ */
+int print_percent(va_list types, char buffer[],
+		int flags, int width, int precision, int size)
+{
+	UNUSED(types);
+	UNUSED(buffer);
+	UNUSED(flags);
+	UNUSED(width);
+	UNUSED(precision);
+	UNUSED(size);
+	return (write(1, "%%", 1));
+}
+
+/************************* PRINT INT *************************/
+/**
+ * print_int - Print int
+ * @types: Lista of arguments
+ * @buffer: Buffer array to handle print
+ * @flags:  Calculates active flags
+ * @width: get width.
+ * @precision: Precision specification
+ * @size: Size specifier
+ * Return: Number of chars printed
  */
 int print_int(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
